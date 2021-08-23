@@ -1,6 +1,6 @@
 
 #Build 
-FROM node:alpine as builder
+FROM node:alpine 
 
 WORKDIR '/reactApp'
 
@@ -16,8 +16,8 @@ RUN npm run build
 
 #Run
 
-FROM nginx
+# FROM nginx
 
-COPY --from=builder /reactApp/build /usr/share/nginx/html
+# COPY --from=builder /reactApp/build /usr/share/nginx/html
 
 
